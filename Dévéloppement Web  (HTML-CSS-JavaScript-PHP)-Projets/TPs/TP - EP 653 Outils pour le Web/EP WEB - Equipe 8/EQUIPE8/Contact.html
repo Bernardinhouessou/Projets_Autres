@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <link rel="stylesheet" href="style.css" />
+        <title>Logiciel</title>
+        
+    </head>
+
+    <body>
+    <H1><span><a href="Acceuil.html">BigDeal.fr</a></span></H1>
+    <H2>Contact</H2>
+    <table>
+  	 	 <tr>
+       		<td>
+       			<div id="menu">
+					
+					<div class="menu" id="menu1" onclick="afficheMenu(this)">
+						<a href="#">Informatique</a>
+					</div>
+					
+					<div id="sousmenu1" style="display:none">
+						<div class="sousmenu">
+							<a href="PCBureau.html">Ordinateur de Bureau</a>
+						</div>
+						<div class="sousmenu">
+							<a href="PCPortable.html">Ordinateur Portable</a>
+						</div>
+
+					</div>
+					
+					<div class="menu" id="menu2" onclick="afficheMenu(this)">
+						<a href="#">Image et Son</a>
+					</div>
+					
+					<div id="sousmenu2" style="display:none">
+						<div class="sousmenu">
+							<a href="TVEcran.html">TV et Ecran</a>
+						</div>
+						<div class="sousmenu">
+							<a href="Photo.html">Appareil Photo</a>
+						</div>
+
+					</div>
+					
+					<div class="menu" id="menu3" onclick="afficheMenu(this)">
+						<a href="#">Telephonie et Gps</a>
+					</div>
+					
+					<div id="sousmenu3" style="display:none">
+						<div class="sousmenu">
+							<a href="#Telephonie.html">Telephonie</a>
+						</div>
+						<div class="sousmenu">
+							<a href="GPS.html">GPS</a>
+						</div>
+
+					</div>
+					
+					<div class="menu" id="menu4" onclick="afficheMenu(this)">
+						<a href="#">Jeux et Consoles</a>
+					</div>
+					
+					<div id="sousmenu4" style="display:none">
+						<div class="sousmenu">
+							<a href="JeuxPC.html">PC</a>
+						</div>
+						<div class="sousmenu">
+							<a href="JeuxPs4.html">Playstation 4</a>
+						</div>
+						<div class="sousmenu">
+							<a href="JeuxXBOX.html">XBOX One</a>
+						</div>
+
+					</div>
+					
+					<div class="menu" id="menu5" onclick="afficheMenu(this)">
+						<a href="Logiciel.html">Logiciels</a>
+					</div>					
+				
+	
+
+</div>
+       		</td> 
+       		<td>
+       		
+       		</td>
+
+   	 </tr>
+	</table>
+	
+		<p class="contact">
+       		<form action="contactscript.php" method="post" name="contact">
+				<p>
+				Numéro client: 
+				  <input name="numero"><br />
+                Votre Email :<input name="ymail" type="text" id="customer_mail" size="30">
+                
+                <br>
+				Votre sexe: 
+				<input type="radio" name="sexe" value="homme">un homme <br />
+				<input type="radio" name="sexe" value="femme">une femme<p><br />
+				Motif de contact: <br />
+				<input type="checkbox" name="Motif" value="Candidature"> Candidature <br />
+				<input type="checkbox" name="Motif" value="Reclamation"> Reclamation <br />
+				<input type="checkbox" name="Motif" value="SAV"> Sav <br />
+				<input type="checkbox" name="Motif" value="Autres"> Autres...<br /><p>
+				Votre message:<br>
+				<textarea name="message" rows="2" cols="30"></textarea><p>
+				<input type="submit" value="envoyer">
+			</form>
+       		
+	</p>
+	<p>
+		<br /> <br /> <br /> 
+		<a href="Contact.html">Contactez-nous</a> - <a href="CGV.php">CGV</a>
+		</p>
+	<script type="text/javascript" src="functions.js"></script>
+    </body>
+</html>

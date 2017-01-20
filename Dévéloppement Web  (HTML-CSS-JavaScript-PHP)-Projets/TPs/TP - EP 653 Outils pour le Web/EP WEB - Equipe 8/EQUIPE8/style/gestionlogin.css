@@ -1,0 +1,75 @@
+	@charset "utf-8";
+/* CSS Document */
+
+
+#titre
+{
+font-family:"Arial Helvetica", sans-serif;
+font-size:200%;
+font-weight:bold;
+table-layout:auto;
+alignment-adjust:central;
+}
+
+th
+{
+text-transform : uppercase;
+}
+body ,table,p
+{
+	font-family: "Arial Helvetica",sans-serif;
+	font-size: 95%;
+	font-weight: bold;
+	table-layout: auto;
+	alignment-adjust: central;
+
+}
+form {
+background-color:#FFFFFF;
+padding:10px;
+width:120px;
+}
+label ,mdplogin
+{
+margin-top:40px;
+display:block;
+width=44440;
+margin-left:1px;
+}
+
+input
+{
+padding: 5px;
+border: 1px solid #1E7FCB;
+border-radius: 5px;
+width: 500px;
+height: 50px;	
+}
+input[type=submit], input[type=reset],input[type=file] 
+{
+width:100px;
+margin-left:5px;
+cursor:pointer;
+}
+
+#AJOUTERCATA
+{
+width:220px;
+margin-left:5px;
+cursor:pointer;
+
+}
+#CREERDBTABLE
+{
+width:520px;
+margin-left:5px;
+cursor:pointer;
+
+}
+
+#ERRORBASE
+{
+font-size:150%;
+color:red;
+	
+}

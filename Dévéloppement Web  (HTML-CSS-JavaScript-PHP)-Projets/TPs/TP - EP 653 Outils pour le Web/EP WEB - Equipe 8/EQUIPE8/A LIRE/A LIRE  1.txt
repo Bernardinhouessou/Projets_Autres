@@ -1,0 +1,22 @@
+aller directement sur les liens indiquer ci-dessous 
+ou aller sur accueil.php
+
+
+N'oublier pas de configurer votre addresse de messagerie dans le fichier "test_smtp_gmail_basic.php" pour permettre 
+aux clientss de vous contacter
+
+$mail->Username = "saisissezvotreadresseelectronique@gmail.com"; // SMTP username
+$mail->Password = "saisisservotremotdepasse"; // SMTP password 
+
+
+PARTIE ADMINISTRATEUR ouvrir le fichier login.php
+-------------------------------------------------------
+IDENTIFIANTS ADMINISTRATEUR PAR DEFAUT
+Utilisateur:admin
+MOt de passe :admin
+
+
+PARTIE CLIENT ouvrir le fichier accueil.php
+-------------------------------------------------------
+
+Partie pas finie completement

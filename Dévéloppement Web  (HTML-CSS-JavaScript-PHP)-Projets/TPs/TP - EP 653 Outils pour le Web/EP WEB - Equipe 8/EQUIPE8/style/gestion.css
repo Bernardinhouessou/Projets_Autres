@@ -1,0 +1,96 @@
+@charset "utf-8";
+/* CSS Document */
+p
+{
+ font-family:"Arial Helvetica",sans-serif;
+ font-size:90%;
+ 
+}
+body 
+{
+ font-family:Arial, Helvetica, sans-serif;
+ font-size:110%;
+ font-weight:bold;
+ }
+form 
+{
+ background-color:#1E7FCB;
+ padding:10px;
+ width:1250px;
+ }
+ #LinkModifIMage
+ {
+font-family:Arial, Helvetica, sans-serif;
+font-size:150%;
+color:red;
+ }
+label 
+{
+ margin-top:10px;
+ display:block;
+}
+
+#faproduit
+{
+	font-size:130%;
+ 	font-weight:bold;
+	padding: 5px;
+	border: 1px solid #1E7FCB;
+	border-radius: 5px;
+	width: 500px;
+	height: 50px;	
+}
+
+
+#image
+{
+	padding: 0px;
+	border: 1px solid #1E7FCB;
+	border-radius: 5px;
+	width: 700px;
+	height: 50px;
+	box-shadow: 1px 1px 2px ##FFFFFF inset;
+}
+
+input:focus, textarea:focus{  
+background-color: yellow;  
+} 
+
+#errormarque,#errordesignation,#errorfaproduit,#errordim ,#errorprix,#errorpoids
+{
+font-size:150%;
+color:red;
+display:none;
+}
+#infotech
+{
+	width: 500px;
+	height: 200px;	
+	
+}
+input, textarea 
+{   
+    font-size:150%;
+ 	
+	padding: 5px;
+	border: 1px solid #1E7FCB;
+	border-radius: 5px;
+	width: 500px;
+	height: 50px;	
+}
+ 
+input[type=submit], input[type=reset],input[type=file] 
+ {
+ width:200px;
+ margin-left:5px;
+ cursor:pointer;
+ }
+
+#table1 {
+	font-family: "Arial Helvetica",sans-serif;
+	font-size: 95%;
+	font-weight: bold;
+	table-layout: auto;
+	alignment-adjust: central;
+
+}
