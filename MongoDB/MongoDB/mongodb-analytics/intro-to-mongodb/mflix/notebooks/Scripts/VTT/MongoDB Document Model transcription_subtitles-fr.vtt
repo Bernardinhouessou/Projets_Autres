@@ -1,0 +1,369 @@
+WEBVTT
+
+1
+00:00:00.000 --> 00:00:03.210
+OK, avant de faire quoi que ce soit dans ce cours,
+
+2
+00:00:03.210 --> 00:00:11.210
+Nous avons besoin de comprendre 
+le modèle de documents de MongoDB.
+
+3
+00:00:11.210 --> 00:00:12.865
+Si vous connaissez le format JSON,
+
+4
+00:00:12.865 --> 00:00:19.150
+JSON donne un bon aperçu de ce que 
+sont les enregistrements dans MongoDB.
+
+5
+00:00:19.150 --> 00:00:21.430
+Dans une base de données relationnelle
+
+6
+00:00:21.430 --> 00:00:25.030
+les lignes sont stockées dans des tables
+
+7
+00:00:25.030 --> 00:00:26.315
+et chaque ligne est un enregistrement.
+
+8
+00:00:26.315 --> 00:00:29.005
+MongoDB est une base de documents,
+
+9
+00:00:29.005 --> 00:00:32.230
+et le type des enregistrements stockés dans MongoDB,
+
+10
+00:00:32.230 --> 00:00:36.880
+ou dans un document, est une structure de 
+données hiérarchisée, qui correspond au type
+
+11
+00:00:36.880 --> 00:00:41.850
+de données structurées qu'on trouve dans un langage 
+de programmation de haut niveau comme Python.
+
+12
+00:00:41.850 --> 00:00:45.325
+vous pouvez voir MongoDB comme 
+un dépôt de documents JSON,
+
+13
+00:00:45.325 --> 00:00:47.065
+donc si vous connaissez JSON,
+
+14
+00:00:47.065 --> 00:00:50.080
+vous serez à l'aise avec ce qu'on peut avoir
+
+15
+00:00:50.080 --> 00:00:53.313
+comme structure de documents dans MongoDB.
+
+16
+00:00:53.313 --> 00:00:57.210
+Un document MongoDB est constitué de champs.
+
+17
+00:00:57.210 --> 00:01:00.425
+Chaque champ a une clé et une valeur.
+
+18
+00:01:00.425 --> 00:01:01.945
+Ici, il y a les clés,
+
+19
+00:01:01.945 --> 00:01:03.640
+et là les valeurs.
+
+20
+00:01:03.640 --> 00:01:08.950
+Là où ça devient intéressant, c'est que
+les valeurs peuvent être des entiers,
+
+21
+00:01:08.950 --> 00:01:10.150
+des chaînes de caractères,
+
+22
+00:01:10.150 --> 00:01:12.535
+des nombres à virgule flottante,
+
+23
+00:01:12.535 --> 00:01:16.690
+mais aussi des tableaux, des documents intégrés,
+
+24
+00:01:16.690 --> 00:01:22.485
+ou des documents, ou des tableaux qui 
+contiennent des documents intégrés.
+
+25
+00:01:22.485 --> 00:01:28.240
+Il existe essentiellement trois structures 
+différentes pour placer les valeurs de MongoDB.
+
+26
+00:01:28.240 --> 00:01:30.160
+Il y a les valeurs scalaires, comme les entiers,
+
+27
+00:01:30.160 --> 00:01:31.990
+les nombres à virgule flottante, ou les chaînes.
+
+28
+00:01:31.990 --> 00:01:35.115
+Les dates sont un autre type de valeurs scalaires.
+
+29
+00:01:35.115 --> 00:01:38.110
+Ensuite, il y a les tableaux, et enfin,
+
+30
+00:01:38.110 --> 00:01:40.470
+comme valeur, il y a les documents,
+
+31
+00:01:40.470 --> 00:01:42.525
+comme on en voit un autre exemple ici.
+
+32
+00:01:42.525 --> 00:01:47.315
+L’idée ici est que MongoDB permet 
+aux développeurs d’applications
+
+33
+00:01:47.315 --> 00:01:53.300
+de modéliser les données de la manière 
+qui a le plus de sens pour leur application.
+
+34
+00:01:53.300 --> 00:01:56.885
+Ici, nous avons un exemple tiré du domaine du e-commerce,
+
+35
+00:01:56.885 --> 00:02:00.365
+et les données sont modélisées de façon que les lectures
+
+36
+00:02:00.365 --> 00:02:04.085
+et écritures dans la base de données soient
+les plus efficaces possibles.
+
+37
+00:02:04.085 --> 00:02:06.200
+En tant que spécialiste du traitement des données,
+
+38
+00:02:06.200 --> 00:02:12.125
+vous devrez travailler avec des données 
+applicatives stockées dans une BD MongoDB,
+
+39
+00:02:12.125 --> 00:02:15.520
+en particulier parce que MongoDB est de plus en plus utilisée.
+
+40
+00:02:15.520 --> 00:02:20.810
+Mais il y a aussi des avantages, pour un data 
+scientist, à stocker ses données dans MongoDB
+
+41
+00:02:20.810 --> 00:02:27.465
+et ces avantages sont très proches des raisons
+pour lesquelles un développeur utilise MongoDB.
+
+42
+00:02:27.465 --> 00:02:29.600
+Il faut pouvoir interagir avec
+
+43
+00:02:29.600 --> 00:02:33.995
+la base de données de façon plus efficace qu'avec
+
+44
+00:02:33.995 --> 00:02:37.430
+une BD relationnelle car on doit pouvoir construire
+
+45
+00:02:37.430 --> 00:02:41.285
+des structures complexes comme celles-ci.
+Et le langage de requêtes de MongoDB,
+
+46
+00:02:41.285 --> 00:02:45.230
+les index secondaires, les outils d'analyse intégrés comme
+
+47
+00:02:45.230 --> 00:02:50.105
+le framework d'agrégation de MongoDB,
+gèrent ces modèles de données.
+
+48
+00:02:50.105 --> 00:02:54.590
+Ici, nous avons un exemple qui représente 
+un type particulier de chaussures,
+
+49
+00:02:54.590 --> 00:02:58.820
+et ce qui est intéressant ici, c’est que 
+nous pouvons de représenter tous les
+
+50
+00:02:58.820 --> 00:03:03.915
+attributs de la chaussure et toutes ses variantes.
+
+51
+00:03:03.915 --> 00:03:06.860
+Ce que nous entendons par variantes ici sont
+
+52
+00:03:06.860 --> 00:03:10.190
+les différentes options qui vous sont proposées
+sur les chaussures, en tant que consommateur.
+
+53
+00:03:10.190 --> 00:03:13.340
+La taille, la couleur, etc
+
+54
+00:03:13.340 --> 00:03:16.580
+Et la façon dont ce modèle de données est conçu
+
+55
+00:03:16.580 --> 00:03:21.365
+permet de construire un index qui nous permet de rechercher
+
+56
+00:03:21.365 --> 00:03:27.200
+toutes les chaussures orange, pointure 39 en stock, par exemple.
+
+57
+00:03:27.200 --> 00:03:29.455
+Du point de vue du développeur,
+
+58
+00:03:29.455 --> 00:03:33.260
+l’idée ici est que nous pouvons stocker 
+tout ce que avons à stocker dans
+
+59
+00:03:33.260 --> 00:03:39.855
+un seul document, de façon à pouvoir construire 
+une page web avec une seule requête à la BD
+
+60
+00:03:39.855 --> 00:03:42.605
+Donc, plutôt que de faire des jointures sur plusieurs tables,
+
+61
+00:03:42.605 --> 00:03:44.780
+ce qui est forcément moins efficace,
+
+62
+00:03:44.780 --> 00:03:46.430
+on fait une simple requête.
+
+63
+00:03:46.430 --> 00:03:50.570
+Toutes les données sont stockées séquentiellement 
+au même endroit sur le disque et en mémoire,
+
+64
+00:03:50.570 --> 00:03:54.105
+et au final la requête est très rapide.
+
+65
+00:03:54.105 --> 00:03:55.760
+Notez qu’ici, avec ce modèle de données,
+
+66
+00:03:55.760 --> 00:04:00.485
+on inclut les commentaires avec les données du produit. A nouveau,
+
+67
+00:04:00.485 --> 00:04:04.580
+on peut, en une seule requête à la base de données,
+
+68
+00:04:04.580 --> 00:04:10.290
+construire la page web qui pourrait être 
+générée à partir des données de ce document.
+
+69
+00:04:10.290 --> 00:04:14.075
+Comme data scientist, surtout si vous devenez à l'aise avec
+
+70
+00:04:14.075 --> 00:04:17.665
+le langage de requêtes de MongoDB 
+et le framework d'agrégation,
+
+71
+00:04:17.665 --> 00:04:22.400
+vous pourrez capitaliser sur cette efficacité 
+des requêtes dans tous les types
+
+72
+00:04:22.400 --> 00:04:27.905
+d'analyse que vous voulez faire, sur tous vos jeux de données.
+
+73
+00:04:27.905 --> 00:04:33.195
+Donc, à nouveau, une vision simplifiée du 
+modèle de documents de MongoDB :
+
+74
+00:04:33.195 --> 00:04:39.495
+voyez-le comme un document JSON, ou voyez-le comme un dictionnaire Python.
+
+75
+00:04:39.495 --> 00:04:41.730
+Et dans un dictionnaire,
+
+76
+00:04:41.730 --> 00:04:44.880
+les valeurs peuvent être des scalaires,
+
+77
+00:04:44.880 --> 00:04:46.470
+des tableaux,
+
+78
+00:04:46.470 --> 00:04:49.515
+ou elles-mêmes des dictionnaires.
+
+79
+00:04:49.515 --> 00:04:52.560
+Et il peut y avoir autant de niveaux d'intégration ou d'imbrication
+
+80
+00:04:52.560 --> 00:04:56.040
+que nécessaire pour une application particulière.
+
+81
+00:04:56.040 --> 00:05:00.340
+Donc, bien sûr, vous pouvez avoir un modèle
+de données complètement "à plat" si besoin,
+
+82
+00:05:00.340 --> 00:05:04.230
+avec juste des clés et des valeurs, et toutes les valeurs scalaires.
+
+83
+00:05:04.230 --> 00:05:09.320
+Mais il y a souvent une bonne raison pour avoir quelques niveaux
+hiérarchiques dans le modèle de données.
+
+84
+00:05:09.320 --> 00:05:12.045
+Et souvent cette raison est l'efficacité
+
+85
+00:05:12.045 --> 00:05:15.210
+ou la simplicité dans l'utilisation des données.

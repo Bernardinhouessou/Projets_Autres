@@ -1,0 +1,32 @@
+2
+00:00:00,760 --> 00:00:04,200
+Bienvenue dans ce cours : 
+introduction à MongoDB Ce cours fait partie de 
+notre spécialisation, MongoDB Analytics, qui a été créée pour vous fournir une compréhension profonde
+ sur pour utiliser pleinement MongoDB en science des données et en analyse. Évidemment, nous devons
+commencer au début et vous fournir
+les connaissances de base sur le fonctionnement de MongoDB
+ comment l'utiliser, où il peut s'intégrer dans vos
+habitudes de développement, avant d'entrer 
+dans le vif du sujet : MongoDB. Dans ce cours, vous apprendrez
+ les principes de base de MongoDB nécessaires pour comprendre 
+comment exploiter pleinement sa puissance pour analyser des données. Ces principes de base incluront 
+des sujets comme le modèle de documents de MongoDB, l'importation 
+ de données dans un cluster MongoDB, ou comment travailler avec une 
+API CRUD avec MongoDB, ainsi qu'une introduction au framework 
+d'agrégation de MongoDB. Ces sujets seront
+vous seront expliqués par le biais d'une application 
+de démonstration, Mflix, qui est une application de streaming vidéo semblable aux services de streaming 
+en ligne les plus utilisés. Cette première rencontre vous montrera comment la création d'applications
+est simple et pratique avec MongoDB. En plus de ces sujets essentiels, vous allez apprendre, et travailler avec, des outils et services de MongoDB. En particulier, vous allez
+travailler avec "MongoDB Atlas", notre service de Bases de Données, "MongoDB Compass" notre outil de visualisation de 
+schémas, ainsi que de nombreux outils de commande en ligne très utiles. Ce cours est pour les nouveaux arrivants
+dans la communauté MongoDB, il ne nécessite pas de connaissance 
+a priori sur MongoDB. Cela dit, nous avons quelques 
+pré-requis techniques dont vous devez avoir conscience. Nous supposons que vous avez 
+des connaissances en Python le plus beau langage 
+de programmation du monde. C'est le langage privilégié
+pour toute cette spécialisation. Nous vous demanderons d'installer
+l'environnement Python 3 sur votre poste de travail. Pour finir, je veux juste vous 
+souhaiter encore la bienvenue dans ce premier cours sur MongoDB. Nous espérons que vous apprécierez
+le contenu que nous vous avons préparé et nous vous souhaitons bonne chance. A tout de suite en cours.

@@ -1,0 +1,38 @@
+Un avantage d'utiliser MongoDB en sciences des données
+est qu'il est très facile d'entrer des données dans MongoDB, et facile de changer le modèle des données
+selon les besoins, pour les analyser. Avec des données dans MongoDB, on peut tirer profit des index, du langage de requête de MongoDB, et du framework d'agrégation pour manipuler
+et explorer efficacement les données, lorsqu'on cherche à mieux comprendre, et à affiner nos besoins. MongoDB propose une version gratuite dans Atlas,
+qui est parfaite pour commencer. Atlas est un service d’hébergement MongoDB
+fourni par les concepteurs de MongoDB. Il est facile de migrer de la version gratuite à
+un hébergement de production lorsqu'on est prêt. Pour commencer, créez un compte sur MongoDB Atlas, en suivant le lien donné
+dans les notes de ce cours. Nous allons chargé des jeux de données initiaux, 
+qui seront nettoyées et analysées dès que nous aurons créé un cluster dans Atlas. Veuillez créer un compte et enregistrer 
+vos informations d’identification quelque part. Une fois que vous aurez soumis
+le formulaire de création de compte, on vous demandera de créer un "groupe". Atlas utilise les groupes pour vous permettre de 
+contrôler qui a accès à vos données. Comme souvent, vous pouvez donner des droits complets
+en lecture/écriture à certains utilisateurs comme les data scientists de votre équipe, 
+et des droits en lecture seule aux autres. Veuillez saisir "Analytics" comme nom de groupe. Dans la suite de ce cours, nous vous donnerons des
+instructions spécifiques pour les tâches de configuration comme celle-ci. Ainsi, en cas de
+problème, il sera facile de trouver d'où il vient. Une fois le groupe créé, vous obtenez 
+un écran comme celui-ci. Veuillez noter que, comme tous les sites web, 
+Atlas est développé de façon active. L'interface que vous aurez pourra être
+différente de celle que je vous montre 
+[NDT : c'est le cas lors de la traduction en mai 2019] Notez aussi qu’Atlas utilise Intercom, et vous pourriez voir un message de bienvenue
+lors de votre première création de compte. Ensuite, pas d'inquiétude si vous voyez un 
+montant à payer, dans la partie "pricing". Choisissez M0, ici, dans la partie "instance size", et le montant repassera à zéro. Nommons ce cluster "mflix". C'est le nom de l'appli que nous allons
+créer tout au long de ce cours. Une fois que vous avez nommé le cluster,
+et choisi M0 pour sa taille, descendez tout en bas du formulaire. Et créez un utilisateur admin, de nom "analytics", et de mot de passe "analytics-password". Ces informations d'identification seront utilisées pour se connecter
+à ce cluster MongoDB dans les scripts Python et les applications, plus loin dans ce cours. Si le terme cluster ne vous est pas familier, pas d'inquiétude. Tout ce que vous devez savoir à ce stade, 
+ c'est qu’un cluster apporte de la redondance. Le cluster que nous créons consiste en fait en
+trois serveurs de BD MongoDB. Cela vous assure que vos données restent toujours accessibles. S'il y a peu de chances qu'il y ait un problème, un jour : un crash d'ordinateur, une panne réseau, ou tout autre problème, Avoir un cluster plutôt que juste une instance autonome garantit que vous pourrez accéder à vos données même si un problème apparaît sur un des serveurs du cluster. Les bibliothèques clientes que nous utiliserons
+en Python basculeront automatiquement sur un autre des serveurs si, pour une raison quelconque, il ne pouvait plus communiquer avec 
+celui sur lequel il lisait ou écrivait. Cela s'appelle un basculement automatique en cas de panne. Comme chaque nœud du cluster tient à jour 
+une copie de vos données, peu importe celui que votre application utilise. Tout cela est géré automatiquement pour vous. Vous ne remarquerez probablement même 
+pas si un basculement sur panne se produit. OK, avec ces quelques explications sur ce qu'est un cluster, cliquez sur "confirm & deploy" pour lancer le processus de création. Vous verrez peut-être un captcha dans une nouvelle fenêtre. faites ce qu'on vous demande, et cliquez sur "verify". La création de vos clusters peut prendre quelques minutes. En attendant, assurons-nous que nous pourrons
+accéder à notre cluster lorsque nous écrirons du code Python. Cliquez sur l'onglet "security", puis sur l'onglet "IP-WhiteList". Cliquez sur le bouton "Add IP Address", 
+puis sur le bouton "Allow Access from Anywhere". Et enfin sur "Confirm". Atlas permet de restreindre l'accès à un cluster 
+depuis une classe spécifique d'adresses IP pour, par exemple, s'assurer que seuls les ordinateurs 
+d'un réseau d'une entreprise particulière peut se connecter au cluster. Autoriser l’accès depuis n’importe où
+vous facilitera l'accès à MongoDB où que vous soyez, 
+et facilite l'accès pour ce cours. Il faudra de toutes façons fournir un identifiant 
+et un mot de passe pour accéder au cluster. Maintenant, cliquez sur l'onglet "Clusters", et attendez que votre cluster finisse de s'initialiser.

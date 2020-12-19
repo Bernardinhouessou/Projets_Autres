@@ -1,0 +1,29 @@
+OK, avant de faire quoi que ce soit dans ce cours, Nous avons besoin de comprendre 
+le modèle de documents de MongoDB. Si vous connaissez le format JSON, JSON donne un bon aperçu de ce que 
+sont les enregistrements dans MongoDB. Dans une base de données relationnelle les lignes sont stockées dans des tables et chaque ligne est un enregistrement. MongoDB est une base de documents, et le type des enregistrements stockés dans MongoDB, ou dans un document, est une structure de 
+données hiérarchisée, qui correspond au type de données structurées qu'on trouve dans un langage 
+de programmation de haut niveau comme Python. vous pouvez voir MongoDB comme 
+un dépôt de documents JSON, donc si vous connaissez JSON, vous serez à l'aise avec ce qu'on peut avoir comme structure de documents dans MongoDB. Un document MongoDB est constitué de champs. Chaque champ a une clé et une valeur. Ici, il y a les clés, et là les valeurs. Là où ça devient intéressant, c'est que
+les valeurs peuvent être des entiers, des chaînes de caractères, des nombres à virgule flottante, mais aussi des tableaux, des documents intégrés, ou des documents, ou des tableaux qui 
+contiennent des documents intégrés. Il existe essentiellement trois structures 
+différentes pour placer les valeurs de MongoDB. Il y a les valeurs scalaires, comme les entiers, les nombres à virgule flottante, ou les chaînes. Les dates sont un autre type de valeurs scalaires. Ensuite, il y a les tableaux, et enfin, comme valeur, il y a les documents, comme on en voit un autre exemple ici. L’idée ici est que MongoDB permet 
+aux développeurs d’applications de modéliser les données de la manière 
+qui a le plus de sens pour leur application. Ici, nous avons un exemple tiré du domaine du e-commerce, et les données sont modélisées de façon que les lectures et écritures dans la base de données soient
+les plus efficaces possibles. En tant que spécialiste du traitement des données, vous devrez travailler avec des données 
+applicatives stockées dans une BD MongoDB, en particulier parce que MongoDB est de plus en plus utilisée. Mais il y a aussi des avantages, pour un data 
+scientist, à stocker ses données dans MongoDB et ces avantages sont très proches des raisons
+pour lesquelles un développeur utilise MongoDB. Il faut pouvoir interagir avec la base de données de façon plus efficace qu'avec une BD relationnelle car on doit pouvoir construire des structures complexes comme celles-ci.
+Et le langage de requêtes de MongoDB, les index secondaires, les outils d'analyse intégrés comme le framework d'agrégation de MongoDB,
+gèrent ces modèles de données. Ici, nous avons un exemple qui représente 
+un type particulier de chaussures, et ce qui est intéressant ici, c’est que 
+nous pouvons de représenter tous les attributs de la chaussure et toutes ses variantes. Ce que nous entendons par variantes ici sont les différentes options qui vous sont proposées
+sur les chaussures, en tant que consommateur. La taille, la couleur, etc Et la façon dont ce modèle de données est conçu permet de construire un index qui nous permet de rechercher toutes les chaussures orange, pointure 39 en stock, par exemple. Du point de vue du développeur, l’idée ici est que nous pouvons stocker 
+tout ce que avons à stocker dans un seul document, de façon à pouvoir construire 
+une page web avec une seule requête à la BD Donc, plutôt que de faire des jointures sur plusieurs tables, ce qui est forcément moins efficace, on fait une simple requête. Toutes les données sont stockées séquentiellement 
+au même endroit sur le disque et en mémoire, et au final la requête est très rapide. Notez qu’ici, avec ce modèle de données, on inclut les commentaires avec les données du produit. A nouveau, on peut, en une seule requête à la base de données, construire la page web qui pourrait être 
+générée à partir des données de ce document. Comme data scientist, surtout si vous devenez à l'aise avec le langage de requêtes de MongoDB 
+et le framework d'agrégation, vous pourrez capitaliser sur cette efficacité 
+des requêtes dans tous les types d'analyse que vous voulez faire, sur tous vos jeux de données. Donc, à nouveau, une vision simplifiée du 
+modèle de documents de MongoDB : voyez-le comme un document JSON, ou voyez-le comme un dictionnaire Python. Et dans un dictionnaire, les valeurs peuvent être des scalaires, des tableaux, ou elles-mêmes des dictionnaires. Et il peut y avoir autant de niveaux d'intégration ou d'imbrication que nécessaire pour une application particulière. Donc, bien sûr, vous pouvez avoir un modèle
+de données complètement "à plat" si besoin, avec juste des clés et des valeurs, et toutes les valeurs scalaires. Mais il y a souvent une bonne raison pour avoir quelques niveaux
+hiérarchiques dans le modèle de données. Et souvent cette raison est l'efficacité ou la simplicité dans l'utilisation des données.

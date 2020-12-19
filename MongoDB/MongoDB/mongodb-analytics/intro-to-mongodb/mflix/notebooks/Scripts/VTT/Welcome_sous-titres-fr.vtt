@@ -1,0 +1,213 @@
+WEBVTT
+
+1
+00:00:00.000 --> 00:00:00.760
+
+2
+00:00:00.760 --> 00:00:04.200
+Bienvenue dans ce cours : 
+introduction à MongoDB
+
+3
+00:00:04.200 --> 00:00:07.720
+Ce cours fait partie de 
+notre spécialisation, MongoDB
+
+4
+00:00:07.720 --> 00:00:10.450
+Analytics, qui a été créée pour vous fournir
+
+5
+00:00:10.450 --> 00:00:13.660
+une compréhension profonde
+ sur pour utiliser pleinement
+
+6
+00:00:13.660 --> 00:00:17.830
+MongoDB en science des données et en analyse.
+
+7
+00:00:17.830 --> 00:00:20.140
+Évidemment, nous devons
+commencer au début
+
+8
+00:00:20.140 --> 00:00:22.690
+et vous fournir
+les connaissances de base
+
+9
+00:00:22.690 --> 00:00:26.260
+sur le fonctionnement de MongoDB
+ comment l'utiliser,
+
+10
+00:00:26.260 --> 00:00:28.420
+où il peut s'intégrer dans vos
+habitudes
+
+11
+00:00:28.420 --> 00:00:33.380
+de développement, avant d'entrer 
+dans le vif du sujet : MongoDB.
+
+12
+00:00:33.380 --> 00:00:36.910
+Dans ce cours, vous apprendrez
+ les principes de base de MongoDB
+
+13
+00:00:36.910 --> 00:00:39.520
+nécessaires pour comprendre 
+comment exploiter pleinement
+
+14
+00:00:39.520 --> 00:00:42.550
+sa puissance pour analyser des données.
+
+15
+00:00:42.550 --> 00:00:46.090
+Ces principes de base incluront 
+des sujets comme le modèle
+
+16
+00:00:46.090 --> 00:00:49.660
+de documents de MongoDB, l'importation 
+ de données dans un cluster MongoDB,
+
+17
+00:00:49.660 --> 00:00:52.150
+ou comment travailler avec une 
+API CRUD avec MongoDB,
+
+18
+00:00:52.150 --> 00:00:57.850
+ainsi qu'une introduction au framework 
+d'agrégation de MongoDB.
+
+19
+00:00:57.850 --> 00:01:00.220
+Ces sujets seront
+vous seront expliqués
+
+20
+00:01:00.220 --> 00:01:02.730
+par le biais d'une application 
+de démonstration, Mflix,
+
+21
+00:01:02.730 --> 00:01:06.070
+qui est une application de streaming vidéo
+
+22
+00:01:06.070 --> 00:01:09.310
+semblable aux services de streaming 
+en ligne les plus utilisés.
+
+23
+00:01:09.310 --> 00:01:11.830
+Cette première rencontre vous montrera
+
+24
+00:01:11.830 --> 00:01:16.150
+comment la création d'applications
+est simple et pratique
+
+25
+00:01:16.150 --> 00:01:18.100
+avec MongoDB.
+
+26
+00:01:18.100 --> 00:01:21.340
+En plus de ces sujets essentiels,
+
+27
+00:01:21.340 --> 00:01:25.120
+vous allez apprendre, et travailler avec, des outils
+
+28
+00:01:25.120 --> 00:01:26.740
+et services de MongoDB.
+
+29
+00:01:26.740 --> 00:01:30.250
+En particulier, vous allez
+travailler avec "MongoDB Atlas",
+
+30
+00:01:30.250 --> 00:01:34.030
+notre service de Bases de Données, "MongoDB Compass"
+
+31
+00:01:34.030 --> 00:01:37.420
+notre outil de visualisation de 
+schémas, ainsi que
+
+32
+00:01:37.420 --> 00:01:40.810
+de nombreux outils de commande en ligne très utiles.
+
+33
+00:01:40.810 --> 00:01:45.460
+Ce cours est pour les nouveaux arrivants
+dans la communauté MongoDB,
+
+34
+00:01:45.460 --> 00:01:48.970
+il ne nécessite pas de connaissance 
+a priori sur MongoDB.
+
+35
+00:01:48.970 --> 00:01:52.390
+Cela dit, nous avons quelques 
+pré-requis techniques
+
+36
+00:01:52.390 --> 00:01:54.460
+dont vous devez avoir conscience.
+
+37
+00:01:54.460 --> 00:01:57.400
+Nous supposons que vous avez 
+des connaissances en Python
+
+38
+00:01:57.400 --> 00:01:59.890
+le plus beau langage 
+de programmation du monde.
+
+39
+00:01:59.890 --> 00:02:04.660
+C'est le langage privilégié
+pour toute cette spécialisation.
+
+40
+00:02:04.660 --> 00:02:07.840
+Nous vous demanderons d'installer
+l'environnement Python 3
+
+41
+00:02:07.840 --> 00:02:09.580
+sur votre poste de travail.
+
+42
+00:02:09.580 --> 00:02:12.880
+Pour finir, je veux juste vous 
+souhaiter encore la bienvenue
+
+43
+00:02:12.880 --> 00:02:14.920
+dans ce premier cours sur MongoDB.
+
+44
+00:02:14.920 --> 00:02:17.740
+Nous espérons que vous apprécierez
+le contenu que nous vous avons préparé
+
+45
+00:02:17.740 --> 00:02:19.830
+et nous vous souhaitons bonne chance.
+
+46
+00:02:19.830 --> 00:02:22.170
+A tout de suite en cours.

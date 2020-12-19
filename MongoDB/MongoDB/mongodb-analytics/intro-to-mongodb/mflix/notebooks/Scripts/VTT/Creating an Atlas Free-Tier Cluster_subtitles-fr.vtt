@@ -1,0 +1,330 @@
+WEBVTT
+
+1
+00:00:00.580 --> 00:00:05.740
+Un avantage d'utiliser MongoDB en sciences des données
+est qu'il est très facile d'entrer des données
+
+2
+00:00:05.740 --> 00:00:11.540
+dans MongoDB, et facile de changer le modèle des données
+selon les besoins, pour les analyser.
+
+3
+00:00:13.330 --> 00:00:17.960
+Avec des données dans MongoDB, on peut tirer profit des index,
+
+4
+00:00:17.960 --> 00:00:21.100
+du langage de requête de MongoDB, et
+
+5
+00:00:21.100 --> 00:00:26.020
+du framework d'agrégation pour manipuler
+et explorer efficacement les données,
+
+6
+00:00:26.020 --> 00:00:30.470
+lorsqu'on cherche à mieux comprendre, et à affiner nos besoins.
+
+7
+00:00:30.470 --> 00:00:34.850
+MongoDB propose une version gratuite dans Atlas,
+qui est parfaite
+
+8
+00:00:34.850 --> 00:00:35.980
+pour commencer.
+
+9
+00:00:35.980 --> 00:00:41.300
+Atlas est un service d’hébergement MongoDB
+fourni par les concepteurs de MongoDB.
+
+10
+00:00:41.300 --> 00:00:45.100
+Il est facile de migrer de la version gratuite à
+un hébergement de production
+
+11
+00:00:45.100 --> 00:00:46.430
+lorsqu'on est prêt.
+
+12
+00:00:46.430 --> 00:00:48.370
+Pour commencer, créez un compte sur
+
+13
+00:00:48.370 --> 00:00:54.070
+MongoDB Atlas, en suivant le lien donné
+dans les notes de ce cours.
+
+14
+00:00:54.070 --> 00:00:57.300
+Nous allons chargé des jeux de données initiaux, 
+qui seront nettoyées et
+
+15
+00:00:57.300 --> 00:01:00.980
+analysées dès que nous aurons créé un cluster dans Atlas.
+
+16
+00:01:00.980 --> 00:01:04.350
+Veuillez créer un compte et enregistrer 
+vos informations d’identification quelque part.
+
+17
+00:01:04.350 --> 00:01:06.360
+Une fois que vous aurez soumis
+le formulaire de création de compte,
+
+18
+00:01:06.360 --> 00:01:08.770
+on vous demandera de créer un "groupe".
+
+19
+00:01:08.770 --> 00:01:12.420
+Atlas utilise les groupes pour vous permettre de 
+contrôler qui a accès à vos données.
+
+20
+00:01:13.540 --> 00:01:18.470
+Comme souvent, vous pouvez donner des droits complets
+en lecture/écriture à certains utilisateurs
+
+21
+00:01:18.470 --> 00:01:22.830
+comme les data scientists de votre équipe, 
+et des droits en lecture seule aux autres.
+
+22
+00:01:22.830 --> 00:01:25.280
+Veuillez saisir "Analytics" comme nom de groupe.
+
+23
+00:01:27.140 --> 00:01:30.560
+Dans la suite de ce cours, nous vous donnerons des
+instructions spécifiques pour les tâches
+
+24
+00:01:30.560 --> 00:01:35.960
+de configuration comme celle-ci. Ainsi, en cas de
+problème, il sera facile de trouver d'où il vient.
+
+25
+00:01:35.960 --> 00:01:40.150
+Une fois le groupe créé, vous obtenez 
+un écran comme celui-ci.
+
+26
+00:01:40.150 --> 00:01:43.770
+Veuillez noter que, comme tous les sites web, 
+Atlas est développé de façon active.
+
+27
+00:01:43.770 --> 00:01:46.850
+L'interface que vous aurez pourra être
+différente de celle que je vous montre 
+[NDT : c'est le cas lors de la traduction en mai 2019]
+
+28
+00:01:47.890 --> 00:01:50.680
+Notez aussi qu’Atlas utilise Intercom, et
+
+29
+00:01:50.680 --> 00:01:54.860
+vous pourriez voir un message de bienvenue
+lors de votre première création de compte.
+
+30
+00:01:54.860 --> 00:01:58.886
+Ensuite, pas d'inquiétude si vous voyez un 
+montant à payer, dans la partie "pricing".
+
+31
+00:01:58.886 --> 00:02:06.760
+Choisissez M0, ici, dans la partie "instance size", et le montant repassera à zéro.
+
+32
+00:02:06.760 --> 00:02:12.770
+Nommons ce cluster "mflix".
+
+33
+00:02:12.770 --> 00:02:17.250
+C'est le nom de l'appli que nous allons
+créer tout au long de ce cours.
+
+34
+00:02:17.250 --> 00:02:21.990
+Une fois que vous avez nommé le cluster,
+et choisi M0 pour sa taille,
+
+35
+00:02:21.990 --> 00:02:24.891
+descendez tout en bas du formulaire.
+
+36
+00:02:24.891 --> 00:02:30.627
+Et créez un utilisateur admin, de nom "analytics",
+
+37
+00:02:30.627 --> 00:02:34.493
+et de mot de passe "analytics-password".
+
+38
+00:02:34.493 --> 00:02:38.825
+Ces informations d'identification seront utilisées pour se connecter
+à ce cluster MongoDB dans les scripts Python
+
+39
+00:02:38.825 --> 00:02:40.910
+et les applications, plus loin dans ce cours.
+
+40
+00:02:42.090 --> 00:02:45.630
+Si le terme cluster ne vous est pas familier, pas d'inquiétude.
+
+41
+00:02:45.630 --> 00:02:50.320
+Tout ce que vous devez savoir à ce stade, 
+ c'est qu’un cluster apporte de la redondance.
+
+42
+00:02:50.320 --> 00:02:54.760
+Le cluster que nous créons consiste en fait en
+trois serveurs de BD MongoDB.
+
+43
+00:02:54.760 --> 00:02:58.350
+Cela vous assure que vos données restent toujours accessibles.
+
+44
+00:02:58.350 --> 00:03:01.466
+S'il y a peu de chances qu'il y ait un problème, un jour :
+
+45
+00:03:01.466 --> 00:03:06.280
+un crash d'ordinateur, une panne réseau, ou tout autre problème,
+
+46
+00:03:06.280 --> 00:03:08.901
+Avoir un cluster plutôt que juste une instance autonome
+
+47
+00:03:08.901 --> 00:03:11.410
+garantit que vous pourrez accéder à vos données
+
+48
+00:03:11.410 --> 00:03:15.140
+même si un problème apparaît sur un des serveurs du cluster.
+
+49
+00:03:15.140 --> 00:03:18.350
+Les bibliothèques clientes que nous utiliserons
+en Python basculeront automatiquement
+
+50
+00:03:18.350 --> 00:03:20.940
+sur un autre des serveurs si, pour une raison quelconque,
+
+51
+00:03:20.940 --> 00:03:24.900
+il ne pouvait plus communiquer avec 
+celui sur lequel il lisait ou écrivait.
+
+52
+00:03:24.900 --> 00:03:27.060
+Cela s'appelle un basculement automatique en cas de panne.
+
+53
+00:03:27.060 --> 00:03:29.480
+Comme chaque nœud du cluster tient à jour 
+une copie de vos données,
+
+54
+00:03:29.480 --> 00:03:32.980
+peu importe celui que votre application utilise.
+
+55
+00:03:32.980 --> 00:03:35.040
+Tout cela est géré automatiquement pour vous.
+
+56
+00:03:36.310 --> 00:03:39.220
+Vous ne remarquerez probablement même 
+pas si un basculement sur panne se produit.
+
+57
+00:03:39.220 --> 00:03:41.748
+OK, avec ces quelques explications sur ce qu'est un cluster,
+
+58
+00:03:41.748 --> 00:03:46.780
+cliquez sur "confirm & deploy" pour lancer le processus de création.
+
+59
+00:03:46.780 --> 00:03:49.143
+Vous verrez peut-être un captcha dans une nouvelle fenêtre.
+
+60
+00:03:49.143 --> 00:03:52.273
+faites ce qu'on vous demande, et cliquez sur "verify".
+
+61
+00:03:52.273 --> 00:03:55.470
+La création de vos clusters peut prendre quelques minutes.
+
+62
+00:03:55.470 --> 00:03:58.830
+En attendant, assurons-nous que nous pourrons
+accéder à notre cluster
+
+63
+00:03:58.830 --> 00:04:01.620
+lorsque nous écrirons du code Python.
+
+64
+00:04:01.620 --> 00:04:07.250
+Cliquez sur l'onglet "security", puis sur l'onglet "IP-WhiteList".
+
+65
+00:04:07.250 --> 00:04:13.170
+Cliquez sur le bouton "Add IP Address", 
+puis sur le bouton "Allow Access from Anywhere".
+
+66
+00:04:14.390 --> 00:04:16.090
+Et enfin sur "Confirm".
+
+67
+00:04:16.090 --> 00:04:21.000
+Atlas permet de restreindre l'accès à un cluster 
+depuis une classe spécifique d'adresses IP pour,
+
+68
+00:04:21.000 --> 00:04:24.920
+par exemple, s'assurer que seuls les ordinateurs 
+d'un réseau d'une entreprise particulière
+
+69
+00:04:24.920 --> 00:04:26.280
+peut se connecter au cluster.
+
+70
+00:04:26.280 --> 00:04:29.616
+Autoriser l’accès depuis n’importe où
+vous facilitera
+
+71
+00:04:29.616 --> 00:04:35.059
+l'accès à MongoDB où que vous soyez, 
+et facilite l'accès pour ce cours.
+
+72
+00:04:35.059 --> 00:04:39.260
+Il faudra de toutes façons fournir un identifiant 
+et un mot de passe pour accéder au cluster.
+
+73
+00:04:39.260 --> 00:04:43.530
+Maintenant, cliquez sur l'onglet "Clusters", et attendez que votre cluster finisse de s'initialiser.
