@@ -7,7 +7,7 @@ Répertoire de projets
 
 
 
-Autres
+Score quiz & others
 --------------------------------------------------------------------------------------------------
 ![alt text](https://github.com/Bernardinhouessou/Projets_Autres/blob/master/OpenClassRoom.PNG)
 
