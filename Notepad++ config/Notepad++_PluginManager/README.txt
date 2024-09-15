@@ -1,1 +1,0 @@
-https://github.com/bruderstein/nppPluginManager/releases/tag/v1.4.12
